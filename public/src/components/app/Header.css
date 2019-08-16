@@ -1,0 +1,13 @@
+header {
+    background-color: #8b4141;
+    padding: 20px;
+    border-bottom: solid 12px #ff835a;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6em;
+    margin: .1em;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+}

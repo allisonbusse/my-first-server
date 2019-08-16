@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: rgb(67, 66, 66);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h2 {
+    margin: 8px 0;
+    text-transform: capitalize;
+}
+
+h3 {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar pokecards"
+    "sidebar paging"
+}
+
+#sidebar {
+    padding: 20px;
+    background-color: #ffacac;
+    grid-area: sidebar;
+    text-align: center;
+}
+
+#pokecards {
+    padding: 20px;
+    grid-area: pokecards;
+    background-color: #ffd5d5;
+}
+
+#paging {
+    background-color: #ffd5d5;
+    text-align: center;
+    padding: 1em;
+}
+
+button {
+    background-color: #ff835a;
+    padding: 8px;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+}
+
+li {
+    width: 220px;
+    padding: 1em;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.poke-image {
+    width: 100%;
+}
+
+.type-span {
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #aca473;
+    height: 3em;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    main {grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sidebar"
+    "pokecards"
+}}
