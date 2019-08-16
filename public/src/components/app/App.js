@@ -18,16 +18,20 @@ class App extends Component {
         const pagingDOM = paging.renderDOM();
         const pagingSection = dom.querySelector('#paging');
         pagingSection.appendChild(pagingDOM);
+
+        const pokeList = new PokeList({ pokemons: [] });
+        const pokeCards = dom.querySelector('#pokecards');
+        const pokeListDOM = pokeList.renderDOM();
+        pokeCards.appendChild(pokeListDOM);
+
         
         function loadPokemon() {
             const options = hashStorage.get();
             getPokemon(options)
                 .then(data => {
-                    const pokeList = new PokeList({ pokemons: data });
-                    const pokeListDOM = pokeList.renderDOM();
-                    const pokeCards = dom.querySelector('#pokecards');
-                    pokeCards.appendChild(pokeListDOM);
+                    const poke = data.results;
                     const totalCount = data.count;
+                    pokeList.update({ pokemons: poke });
                     paging.update({
                         totalCount: totalCount,
                         currentPage: +options.page
@@ -67,9 +71,9 @@ class App extends Component {
             <main>
                 <section id="sidebar">
                 </section>
-                <section id="pokecards">
-                </section>
                 <section id="paging">
+                </section>
+                <section id="pokecards">
                 </section>
             </main>
                 <!-- Footer goes here -->

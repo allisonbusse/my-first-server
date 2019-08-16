@@ -11,3 +11,7 @@ h1 {
     color: white;
     font-family: 'Amatic SC', cursive;
 }
+
+header a {
+    text-decoration: none;
+}

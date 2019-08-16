@@ -22,8 +22,8 @@ main {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "sidebar pokecards"
     "sidebar paging"
+    "sidebar pokecards"
 }
 
 #sidebar {
@@ -72,6 +72,10 @@ li {
 
 .poke-image {
     width: 100%;
+}
+
+#search {
+    font-size: 16px;
 }
 
 .type-span {

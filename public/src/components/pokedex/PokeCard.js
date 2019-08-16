@@ -12,6 +12,7 @@ class PokeCard extends Component {
             <span class="type-span" style="background-color:${pokemons.color_1}">${pokemons.type_1}</span> | 
             <span class="type-span" style="background-color:${pokemons.color_2}">${pokemons.type_2}</span>
         </p>
+        <p>Attack: ${pokemons.attack} | Speed: ${pokemons.speed}</p>
     </li>
         `;
     }

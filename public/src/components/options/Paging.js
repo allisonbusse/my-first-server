@@ -16,20 +16,10 @@ class Paging extends Component {
         }
         
         prevButton.addEventListener('click', () => {
-            event.preventDefault();
-            const pokeList = document.getElementById('pokecards');
-            while(pokeList.hasChildNodes()) {
-                pokeList.removeChild(pokeList.firstChild);
-            }
             updatePage(-1);
         });
         
         nextButton.addEventListener('click', () => {
-            event.preventDefault();
-            const pokeList = document.getElementById('pokecards');
-            while(pokeList.hasChildNodes()) {
-                pokeList.removeChild(pokeList.firstChild);
-            }
             updatePage(1);
         });
     }
